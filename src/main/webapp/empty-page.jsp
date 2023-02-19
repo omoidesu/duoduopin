@@ -1,4 +1,6 @@
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page isELIgnored="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -690,24 +692,21 @@
     ***********************************-->
 
     <!--**********************************
-        Header start
-    ***********************************-->
+           Header start
+       ***********************************-->
     <div class="header">
         <div class="header-content">
             <nav class="navbar navbar-expand">
                 <div class="collapse navbar-collapse justify-content-between">
                     <div class="header-left">
                         <div class="dashboard_bar">
-                            Dashboard
+                            聘多多
                         </div>
                         <div class="nav-item d-flex align-items-center">
                             <div class="input-group search-area">
                                 <input type="text" class="form-control" placeholder="">
                                 <span class="input-group-text"><a href="javascript:void(0)"><i
                                         class="flaticon-381-search-2"></i></a></span>
-                            </div>
-                            <div class="plus-icon">
-                                <a href="javascript:void(0);"><i class="fas fa-plus"></i></a>
                             </div>
                         </div>
                     </div>
@@ -817,102 +816,19 @@
                             </div>
                         </li>
 
-
-                        <li class="nav-item dropdown notification_dropdown">
-                            <a class="nav-link " href="javascript:void(0);" data-bs-toggle="dropdown">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="23.262" height="24"
-                                     viewBox="0 0 23.262 24">
-                                    <g id="icon" transform="translate(-1565 90)">
-                                        <path id="setting_1_" data-name="setting (1)"
-                                              d="M30.45,13.908l-1-.822a1.406,1.406,0,0,1,0-2.171l1-.822a1.869,1.869,0,0,0,.432-2.385L28.911,4.293a1.869,1.869,0,0,0-2.282-.818l-1.211.454a1.406,1.406,0,0,1-1.88-1.086l-.213-1.276A1.869,1.869,0,0,0,21.475,0H17.533a1.869,1.869,0,0,0-1.849,1.567L15.47,2.842a1.406,1.406,0,0,1-1.88,1.086l-1.211-.454a1.869,1.869,0,0,0-2.282.818L8.126,7.707a1.869,1.869,0,0,0,.432,2.385l1,.822a1.406,1.406,0,0,1,0,2.171l-1,.822a1.869,1.869,0,0,0-.432,2.385L10.1,19.707a1.869,1.869,0,0,0,2.282.818l1.211-.454a1.406,1.406,0,0,1,1.88,1.086l.213,1.276A1.869,1.869,0,0,0,17.533,24h3.943a1.869,1.869,0,0,0,1.849-1.567l.213-1.276a1.406,1.406,0,0,1,1.88-1.086l1.211.454a1.869,1.869,0,0,0,2.282-.818l1.972-3.415a1.869,1.869,0,0,0-.432-2.385ZM27.287,18.77l-1.211-.454a3.281,3.281,0,0,0-4.388,2.533l-.213,1.276H17.533l-.213-1.276a3.281,3.281,0,0,0-4.388-2.533l-1.211.454L9.75,15.355l1-.822a3.281,3.281,0,0,0,0-5.067l-1-.822L11.721,5.23l1.211.454A3.281,3.281,0,0,0,17.32,3.151l.213-1.276h3.943l.213,1.276a3.281,3.281,0,0,0,4.388,2.533l1.211-.454,1.972,3.414h0l-1,.822a3.281,3.281,0,0,0,0,5.067l1,.822ZM19.5,7.375A4.625,4.625,0,1,0,24.129,12,4.63,4.63,0,0,0,19.5,7.375Zm0,7.375A2.75,2.75,0,1,1,22.254,12,2.753,2.753,0,0,1,19.5,14.75Z"
-                                              transform="translate(1557.127 -90)"/>
-                                    </g>
-                                </svg>
-
-                                <span class="badge light text-white bg-primary rounded-circle">15</span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <div id="DZ_W_TimeLine02"
-                                     class="widget-timeline dlab-scroll style-1 ps ps--active-y p-3 height370">
-                                    <ul class="timeline">
-                                        <li>
-                                            <div class="timeline-badge primary"></div>
-                                            <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                <span>10 minutes ago</span>
-                                                <h6 class="mb-0">Youtube, a video-sharing website, goes live <strong
-                                                        class="text-primary">$500</strong>.</h6>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="timeline-badge info">
-                                            </div>
-                                            <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                <span>20 minutes ago</span>
-                                                <h6 class="mb-0">New order placed <strong
-                                                        class="text-info">#XF-2356.</strong></h6>
-                                                <p class="mb-0">Quisque a consequat ante Sit amet magna at
-                                                    volutapt...</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="timeline-badge danger">
-                                            </div>
-                                            <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                <span>30 minutes ago</span>
-                                                <h6 class="mb-0">john just buy your product <strong
-                                                        class="text-warning">Sell $250</strong></h6>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="timeline-badge success">
-                                            </div>
-                                            <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                <span>15 minutes ago</span>
-                                                <h6 class="mb-0">StumbleUpon is acquired by eBay. </h6>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="timeline-badge warning">
-                                            </div>
-                                            <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                <span>20 minutes ago</span>
-                                                <h6 class="mb-0">Mashable, a news website and blog, goes live.</h6>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="timeline-badge dark">
-                                            </div>
-                                            <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                <span>20 minutes ago</span>
-                                                <h6 class="mb-0">Mashable, a news website and blog, goes live.</h6>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
                         <li class="nav-item dropdown header-profile">
                             <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
                                 <img src="images/profile/pic1.jpg" width="20" alt=""/>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
                                 <a href="./app-profile.html" class="dropdown-item ai-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18"
-                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                         stroke-linecap="round" stroke-linejoin="round">
+                                    <svg id="icon-user2" xmlns="http://www.w3.org/2000/svg" class="text-primary"
+                                         width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                         <circle cx="12" cy="7" r="4"></circle>
                                     </svg>
-                                    <span class="ms-2">Profile </span>
-                                </a>
-                                <a href="./email-inbox.html" class="dropdown-item ai-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18"
-                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                         stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                        <polyline points="22,6 12,13 2,6"></polyline>
-                                    </svg>
-                                    <span class="ms-2">Inbox </span>
+                                    <span class="ms-2">个人</span>
                                 </a>
                                 <a href="./login.html" class="dropdown-item ai-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18"
@@ -922,19 +838,15 @@
                                         <polyline points="16 17 21 12 16 7"></polyline>
                                         <line x1="21" y1="12" x2="9" y2="12"></line>
                                     </svg>
-                                    <span class="ms-2">Logout </span>
+                                    <span class="ms-2">退出</span>
                                 </a>
                             </div>
-                        </li>
-                        <li class="nav-item">
-
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
     </div>
-
     <!--**********************************
         Header end ti-comment-alt
     ***********************************-->
@@ -943,7 +855,7 @@
         Sidebar start
     ***********************************-->
     <div class="dlabnav">
-        <div class="dlabnav-scroll">
+        <div class="dlabnav-scroll" id="maxping">
             <div class="dropdown header-profile2 ">
                 <a class="nav-link " href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
                     <div class="header-info2 d-flex align-items-center">
@@ -966,16 +878,7 @@
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
-                        <span class="ms-2">Profile </span>
-                    </a>
-                    <a href="./email-inbox.html" class="dropdown-item ai-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18"
-                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                             stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <span class="ms-2">Inbox </span>
+                        <span class="ms-2">个人</span>
                     </a>
                     <a href="./login.html" class="dropdown-item ai-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18"
@@ -985,163 +888,69 @@
                             <polyline points="16 17 21 12 16 7"></polyline>
                             <line x1="21" y1="12" x2="9" y2="12"></line>
                         </svg>
-                        <span class="ms-2">Logout </span>
+                        <span class="ms-2">退出</span>
                     </a>
                 </div>
             </div>
             <ul class="metismenu" id="menu">
                 <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-025-dashboard"></i>
-                    <span class="nav-text">Dashboard</span>
+                    <span class="nav-text">主页</span>
                 </a>
                     <ul aria-expanded="false">
                         <li><a href="index.html">Dashboard Light</a></li>
-                        <li><a href="index-2.html">Dashboard Dark</a></li>
-                        <li><a href="jobs-page.html">Jobs</a></li>
-                        <li><a href="application-page.html">Application</a></li>
-                        <li><a href="my-profile.html">Profile</a></li>
-                        <li><a href="statistics-page.html">Statistics</a></li>
-                        <li><a href="compaines.html">Companies</a></li>
                     </ul>
 
                 </li>
                 <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-093-waving"></i>
-                    <span class="nav-text">Jobs</span>
+                    <span class="nav-text">求职</span>
                 </a>
                     <ul aria-expanded="false">
                         <li><a href="job-list.html">Job Lists</a></li>
-                        <li><a href="job-view.html">Job View</a></li>
-                        <li><a href="job-application.html">Job Application</a></li>
-                        <li><a href="apply-job.html">Apply Job</a></li>
-                        <li><a href="new-job.html">New Job</a></li>
-                        <li><a href="user-profile.html">User Profile</a></li>
                     </ul>
                 </li>
                 <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-050-info"></i>
-                    <span class="nav-text">Apps</span>
+                    <span class="nav-text">题库</span>
                 </a>
                     <ul aria-expanded="false">
                         <li><a href="./app-profile.html">Profile</a></li>
-                        <li><a href="./post-details.html">Post Details</a></li>
                         <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
                             <ul aria-expanded="false">
                                 <li><a href="./email-compose.html">Compose</a></li>
-                                <li><a href="./email-inbox.html">Inbox</a></li>
-                                <li><a href="./email-read.html">Read</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./app-calender.html">Calendar</a></li>
-                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Shop</a>
-                            <ul aria-expanded="false">
-                                <li><a href="./ecom-product-grid.html">Product Grid</a></li>
-                                <li><a href="./ecom-product-list.html">Product List</a></li>
-                                <li><a href="./ecom-product-detail.html">Product Details</a></li>
-                                <li><a href="./ecom-product-order.html">Order</a></li>
-                                <li><a href="./ecom-checkout.html">Checkout</a></li>
-                                <li><a href="./ecom-invoice.html">Invoice</a></li>
-                                <li><a href="./ecom-customers.html">Customers</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-041-graph"></i>
-                    <span class="nav-text">Charts</span>
+                    <span class="nav-text">面试</span>
                 </a>
                     <ul aria-expanded="false">
                         <li><a href="./chart-flot.html">Flot</a></li>
-                        <li><a href="./chart-morris.html">Morris</a></li>
-                        <li><a href="./chart-chartjs.html">Chartjs</a></li>
-                        <li><a href="./chart-chartist.html">Chartist</a></li>
-                        <li><a href="./chart-sparkline.html">Sparkline</a></li>
-                        <li><a href="./chart-peity.html">Peity</a></li>
                     </ul>
                 </li>
                 <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-086-star"></i>
-                    <span class="nav-text">Bootstrap</span>
+                    <span class="nav-text">公司</span>
                 </a>
                     <ul aria-expanded="false">
                         <li><a href="./ui-accordion.html">Accordion</a></li>
-                        <li><a href="./ui-alert.html">Alert</a></li>
-                        <li><a href="./ui-badge.html">Badge</a></li>
-                        <li><a href="./ui-button.html">Button</a></li>
-                        <li><a href="./ui-modal.html">Modal</a></li>
-                        <li><a href="./ui-button-group.html">Button Group</a></li>
-                        <li><a href="./ui-list-group.html">List Group</a></li>
-                        <li><a href="./ui-card.html">Cards</a></li>
-                        <li><a href="./ui-carousel.html">Carousel</a></li>
-                        <li><a href="./ui-dropdown.html">Dropdown</a></li>
-                        <li><a href="./ui-popover.html">Popover</a></li>
-                        <li><a href="./ui-progressbar.html">Progressbar</a></li>
-                        <li><a href="./ui-tab.html">Tab</a></li>
-                        <li><a href="./ui-typography.html">Typography</a></li>
-                        <li><a href="./ui-pagination.html">Pagination</a></li>
-                        <li><a href="./ui-grid.html">Grid</a></li>
-
                     </ul>
                 </li>
                 <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-045-heart"></i>
-                    <span class="nav-text">Plugins</span>
+                    <span class="nav-text">消息</span>
                 </a>
                     <ul aria-expanded="false">
                         <li><a href="./uc-select2.html">Select 2</a></li>
-                        <li><a href="./uc-nestable.html">Nestedable</a></li>
-                        <li><a href="./uc-noui-slider.html">Noui Slider</a></li>
-                        <li><a href="./uc-sweetalert.html">Sweet Alert</a></li>
-                        <li><a href="./uc-toastr.html">Toastr</a></li>
-                        <li><a href="./map-jqvmap.html">Jqv Map</a></li>
-                        <li><a href="./uc-lightgallery.html">Light Gallery</a></li>
                     </ul>
                 </li>
                 <li><a href="widget-basic.html" class="" aria-expanded="false">
                     <i class="flaticon-013-checkmark"></i>
-                    <span class="nav-text">Widget</span>
+                    <span class="nav-text">演讲会</span>
                 </a>
-                </li>
-                <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-072-printer"></i>
-                    <span class="nav-text">Forms</span>
-                </a>
-                    <ul aria-expanded="false">
-                        <li><a href="./form-element.html">Form Elements</a></li>
-                        <li><a href="./form-wizard.html">Wizard</a></li>
-                        <li><a href="./form-ckeditor.html">CkEditor</a></li>
-                        <li><a href="form-pickers.html">Pickers</a></li>
-                        <li><a href="form-validation.html">Form Validate</a></li>
-                    </ul>
-                </li>
-                <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-043-menu"></i>
-                    <span class="nav-text">Table</span>
-                </a>
-                    <ul aria-expanded="false">
-                        <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
-                        <li><a href="table-datatable-basic.html">Datatable</a></li>
-                    </ul>
-                </li>
-                <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-022-copy"></i>
-                    <span class="nav-text">Pages</span>
-                </a>
-                    <ul aria-expanded="false">
-                        <li><a href="./page-login.html">Login</a></li>
-                        <li><a href="./page-register.html">Register</a></li>
-                        <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
-                            <ul aria-expanded="false">
-                                <li><a href="./page-error-400.html">Error 400</a></li>
-                                <li><a href="./page-error-403.html">Error 403</a></li>
-                                <li><a href="./page-error-404.html">Error 404</a></li>
-                                <li><a href="./page-error-500.html">Error 500</a></li>
-                                <li><a href="./page-error-503.html">Error 503</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./page-lock-screen.html">Lock Screen</a></li>
-                        <li><a href="./empty-page.html">Empty Page</a></li>
-                    </ul>
                 </li>
             </ul>
             <div class="plus-box">
