@@ -1,0 +1,57 @@
+[
+  {
+    "name": "containerLayout",
+    "value": "wide-boxed",
+    "id": 1
+  },
+  {
+    "name": "headerBg",
+    "value": "color_1",
+    "id": 2
+  },
+  {
+    "name": "headerPosition",
+    "value": "fixed",
+    "id": 3
+  },
+  {
+    "name": "layout",
+    "value": "horizontal",
+    "id": 5
+  },
+  {
+    "name": "navheaderBg",
+    "value": "color_1",
+    "id": 6
+  },
+  {
+    "name": "primary",
+    "value": "color_14",
+    "id": 7
+  },
+  {
+    "name": "sidebarBg",
+    "value": "color_1",
+    "id": 8
+  },
+  {
+    "name": "sidebarPosition",
+    "value": "fixed",
+    "id": 9
+  },
+  {
+    "name": "sidebarStyle",
+    "value": "full",
+    "id": 10
+  },
+  {
+    "name": "typography",
+    "value": "poppins",
+    "id": 11
+  },
+  {
+    "name": "version",
+    "value": "light",
+    "id": 12
+  }
+]
