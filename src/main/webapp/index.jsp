@@ -25,7 +25,6 @@
     <link href="./vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
     <link href="./vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
 
-
     <link rel="stylesheet" media="screen and (min-width:1040px)" type="text/css" href="./css/stylemax.css">
     <link rel="stylesheet" media="screen and (max-width:1040px)" type="text/css" href="./css/stylemin.css">
     <!-- Style css -->
@@ -971,8 +970,10 @@
         <!-- row -->
         <div class="container-fluid">
             <div class="row">
-<%--                主左边--%>
+
+<%--                主页左侧--%>
                 <div class="col-xl-9">
+
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="card">
@@ -1373,14 +1374,17 @@
                         </div>
                     </div>
                 </div>
-<%-- 主右边--%>
+
+<%-- 主页右侧--%>
                 <div class="col-xl-3">
                     <div class="row">
                         <%--    个人--%>
+
                         <div class="col-xl-12">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row ">
+
                                         <div class="col-xl-12 col-xxl-12 col-sm-12">
                                             <div class="update-profile d-flex">
                                                 <img src="images/profile/pic1.jpg" alt="">
@@ -1401,12 +1405,14 @@
                                                 </div>
                                                 <span class="input-group-text">Upload</span>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-12">
+
                                 <div class="card">
                                     <div class="card-header">
                                         <h4 class="card-title">我的面试</h4>
@@ -1416,6 +1422,7 @@
                                             <div class="list-group"><a href="javascript:void()" class="list-group-item list-group-item-action active">公司1</a>
                                                 <a href="javascript:void()" class="list-group-item list-group-item-action">公司2</a>
                                                 <a href="javascript:void()" class="list-group-item list-group-item-action">公司3</a>
+
                                             </div>
                                         </div>
                                     </div>

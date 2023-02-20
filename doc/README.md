@@ -2,8 +2,9 @@
 
 ## 概述
 
-本项目以Java程序员招聘为主题的网站，设计上借鉴[牛客网](https://www.nowcoder.com/)
-，[BOSS直聘](https://www.zhipin.com/?ka=header-home-logo)等现有招聘网站
+本项目以Java程序员招聘为主题的网站，设计上借鉴[牛客网](https://www.nowcoder.com/)，[BOSS直聘](https://www.zhipin.com/?ka=header-home-logo)等现有招聘网站
+
+项目地址：[GitHub](https://github.com/omoidesu/duoduopin)
 
 ## 需求分析
 
@@ -48,6 +49,8 @@
 
 求职端该模块分为浏览各公司宣讲会信息，预约宣讲，参加宣讲三部分。在参加宣讲的过程中可以投递自己的简历
 
+
+
 ### 招聘者
 
 招聘者与求职者均为普通用户，不同的是招聘者拥有发布招聘信息的权限，并可以在点击导航栏的头像的弹出菜单中更换身份。用户申请为招聘者需要填写公司信息并由管理员审核
@@ -84,4 +87,151 @@
 > 管理题库即对题库的增删查改等基本操作
 
 ## 前端设计
+
+...
+
+## 后端模块
+
+登录模块、求职模块、设定模块、实时沟通模块、题库模块
+
+## 数据库
+
+数据库目前由12张表组成
+
+### 1. 用户表
+
+| 字段         | 类型 / 约束                                                          | 备注                              |
+|------------|------------------------------------------------------------------|---------------------------------|
+| id         | integer / primary key / check id between 100000000 and 999999999 | 用户id                            |
+| username   | text unique                                                      | 用户名                             |
+| password   | text                                                             | 密码                              |
+| permission | int / check permission in (1, 10, 99)                            | 权限，-1为已封禁，1为基础用户，10为高级用户，99为管理员 |
+
+### 2. 用户信息表
+
+| 字段       | 类型  / 约束                               | 备注            |
+|----------|----------------------------------------|---------------|
+| id       | integer / primary key / auto_increment | 主键            |
+| user_id  | int                                    | 用户id          |
+| nickname | text                                   | 昵称            |
+| bio      | text                                   | 个人签名          |
+| email    | text                                   | 邮箱地址          |
+| gender   | int / check gender in (0, 1)           | 性别，1代表男，0代表女  |
+| avatar   | text                                   | 头像 保存为头像图片文件名 |
+| phone    | text                                   | 手机号           |
+| color    | text                                   | 个性化网站颜色       |
+
+### 3. 简历信息表
+
+| 字段              | 类型 / 约束                                | 备注                        |
+|-----------------|----------------------------------------|---------------------------|
+| id              | integer / primary key / auto_increment | 简历id                      |
+| user_id         | int                                    | 用户id                      |
+| real_name       | text                                   | 姓名                        |
+| birthday        | text                                   | 出生年月                      |
+| wechat          | text                                   | 微信号                       |
+| weibo           | text                                   | 微博                        |
+| email_address_2 | text                                   | 备用邮箱                      |
+| homepage        | text                                   | 个人网站                      |
+| address         | text                                   | 现住址                       |
+| other           | text                                   | 掌握技能，各种经历等，以用户id.json格式保存 |
+| appendix        | text                                   | 简历文件名                     |
+
+### 4. 公司表
+
+| 字段                | 类型 / 约束                                | 备注              |
+|-------------------|----------------------------------------|-----------------|
+| id                | integer / primary key / auto_increment | 公司id            |
+| company_name      | text                                   | 公司名             |
+| company_address   | text                                   | 公司地址            |
+| company_employees | int                                    | 员工数量            |
+| about             | text                                   | 公司介绍            |
+| ban               | int / default 0 / check ban in (0, 1)  | 已封禁 0为未封禁，1为已封禁 |
+
+### 5. 雇员表
+
+| 字段         | 类型 / 约束               | 备注   |
+|------------|-----------------------|------|
+| id         | integer / primary key | 主键   |
+| user_id    | int                   | 用户id |
+| company_id | int                   | 公司id |
+
+### 6. 职位表
+
+| 字段             | 类型 / 约束                                   | 备注                   |
+|----------------|-------------------------------------------|----------------------|
+| id             | integer / primary key                     | 职位id                 |
+| job_name       | text                                      | 职位名称                 |
+| job_poster_id  | int                                       | 招聘者id                |
+| job_count_min  | int                                       | 招聘人数(最小值)            |
+| job_count_max  | int / check job_count_max > job_count_min | 招聘人数(最大值)            |
+| job_salary_min | int                                       | 薪资范围(最小值)            |
+| job_salary_max | int                                       | 薪资范围(最大值)            |
+| job_detail     | text                                      | 职位要求                 |
+| job_post_date  | text                                      | 发布日期                 |
+| closed         | int / check closed in (0, 1)              | 招聘是否关闭，0表示未关闭，1表示已关闭 |
+
+### 7. 投递表
+
+| 字段        | 类型 / 约束               | 备注                                                                           |
+|-----------|-----------------------|------------------------------------------------------------------------------|
+| id        | integer / primary key | 主键                                                                           |
+| job_id    | int                   | 职位id                                                                         |
+| poster_id | int                   | 求职者id                                                                        |
+| progress  | int                   | 投递进度 <br/>-1: 已拒绝<br/> 1: 已投递<br/> 2：已查看<br/> 3: 已沟通<br/> 4: 已面试<br/> 9: 已通过 |
+
+### 8. 题库表
+
+| 字段              | 类型 / 约束               | 备注    |
+|-----------------|-----------------------|-------|
+| id              | integer / primary key | 题目id  |
+| question_name   | text                  | 题目名   |
+| question_answer | text                  | 题目答案  |
+| question_belong | int                   | 题目分类  |
+| question_poster | int                   | 出题人id |
+| question_date   | text                  | 出题日期  |
+
+### 9. 回答表
+
+| 字段             | 类型 / 约束               | 备注     |
+|----------------|-----------------------|--------|
+| id             | integer / primary key | 回答id   |
+| question_id    | int                   | 题目id   |
+| answer         | text                  | 回答内容   |
+| answer_user_id | int                   | 回答用户id |
+| answer_date    | text                  | 回答日期   |
+
+### 10. 公司评价
+
+| 字段           | 类型 / 约束                                     | 备注     |
+|--------------|---------------------------------------------|--------|
+| id           | integer / primary key                       | 评价id   |
+| to_company   | int                                         | 公司id   |
+| user_id      | int                                         | 留言用户id |
+| comment_rate | int / check comment_rate in (1, 2, 3, 4, 5) | 等级     |
+| comment      | text                                        | 留言内容   |
+
+### 11. 举报表
+
+| 字段              | 类型 / 约束                          | 备注                                        |
+|-----------------|----------------------------------|-------------------------------------------|
+| id              | integer / primary key            | 举报id                                      |
+| report_type     | int / check in report_type in () | 举报类型                                      |
+| target_id       | int                              | 举报目标id                                    |
+| reporter_id     | int                              | 举报者id                                     |
+| report_reason   | text                             | 留言                                        |
+| report_progress | int                              | 举报进度<br/> 1: 新举报<br/> 2: 已处理<br/> -1: 已关闭 |
+| report_reply    | text                             | 举报回复                                      |
+| operator        | int                              | 处理者id                                     |
+
+### 12. 日程表
+
+| 字段          | 类型 / 约束               | 备注   |
+|-------------|-----------------------|------|
+| id          | integer / primary key | 日程id |
+| for         | int                   | 所属用户 |
+| detail      | text                  | 日程信息 |
+| create_date | text                  | 创建日期 |
+
+### 13 权限注册申请表
 
