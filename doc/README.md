@@ -2,8 +2,9 @@
 
 ## 概述
 
-本项目以Java程序员招聘为主题的网站，设计上借鉴[牛客网](https://www.nowcoder.com/)
-，[BOSS直聘](https://www.zhipin.com/?ka=header-home-logo)等现有招聘网站
+本项目以Java程序员招聘为主题的网站，设计上借鉴[牛客网](https://www.nowcoder.com/)，[BOSS直聘](https://www.zhipin.com/?ka=header-home-logo)等现有招聘网站
+
+项目地址：[GitHub](https://github.com/omoidesu/duoduopin)
 
 ## 需求分析
 
@@ -99,13 +100,12 @@
 
 ### 1. 用户表
 
-| 字段         | 类型 / 约束                                                          | 备注                       |
-|------------|------------------------------------------------------------------|--------------------------|
-| id         | integer / primary key / check id between 100000000 and 999999999 | 用户id                     |
-| username   | text unique                                                      | 用户名                      |
-| password   | text                                                             | 密码                       |
-| permission | int / check permission in (1, 10, 99)                            | 权限，1为基础用户，10为高级用户，99为管理员 |
-| ban        | int / default 0 / check ban in (0, 1)                            | 已封禁 0为未封禁，1为已封禁          |
+| 字段       | 类型 / 约束                                                  | 备注                                                    |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------- |
+| id         | integer / primary key / check id between 100000000 and 999999999 | 用户id                                                  |
+| username   | text unique                                                  | 用户名                                                  |
+| password   | text                                                         | 密码                                                    |
+| permission | int / check permission in (1, 10, 99)                        | 权限，-1为已封禁，1为基础用户，10为高级用户，99为管理员 |
 
 ### 2. 用户信息表
 
